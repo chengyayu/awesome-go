@@ -6,6 +6,7 @@
 
 - [Design](#design)
 - [SOLID](#solid)
+- [AI Harness](#ai-harness)
 - [Utilities](#utilities)
 - [Testing](#testing)
 - [Terminal APP](#terminal-app)
@@ -38,6 +39,16 @@
 ## SOLID
 
 - [wire](https://github.com/google/wire) – Compile-time Dependency Injection for Go.
+
+
+## AI Harness
+
+### 1. Code Quality
+- [ub-mode](https://github.com/unclebob/ub-mode) – Agent skill that forces disciplined engineering: First Make it Work, Then Make it Right, Follow Practice. Enforced by the deterministic quality gates below.（技能本体 + 工具链，需组合使用）
+  - [crapper](https://github.com/unclebob/crapper) – CRAP score per function: `CC² × (1 − coverage)³ + CC`, gate at `< 10`. Go/Java/Clojure/TS/Rust/Python.（复杂度 × 覆盖率）
+  - [dryer](https://github.com/unclebob/dryer) – Structural duplication detector via Jaccard similarity of fingerprints, threshold `0.82`.（消除重复）
+  - [mutator](https://github.com/unclebob/mutator) – Mutation testing: cover the uncovered, kill the survivors, delete dead code.（测试有效性）
+  - [uml-viewer](https://github.com/unclebob/uml-viewer) – Dynamic UML colored by CRAP/mutation metrics; drill down to source and let the agent refactor toward it.（架构可视化）
 
 ## Utilities
 
